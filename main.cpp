@@ -27,5 +27,18 @@ int main() {
         cout << "hoc sinh " << i + 1 << ": " << a[i] << endl;
     }
 
+    cout << "\n===== RESULTS =====\n";
+
+for (int i = 0; i < n; i++) {
+    if (a[i] >= 5) {
+        cout << "hoc sinh " << i + 1 << ": "
+            << a[i] << " -> PASS\n";
+    }
+    else {
+        cout << "hoc sinh " << i + 1 << ": "
+            << a[i] << " -> FAIL\n";
+    }
+}
+
     return 0;
 }
