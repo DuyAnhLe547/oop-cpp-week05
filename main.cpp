@@ -73,6 +73,30 @@ for (int i = 1; i < n; i++) {
     }
 }
 
+cout << "\n===== CLASSIFICATION =====\n";
+
+for (int i = 0; i < n; i++) {
+    cout << "Student " << i + 1 << ": " << a[i] << " -> ";
+
+    if (a[i] >= 9) {
+        cout << "Excellent";
+    }
+    else if (a[i] >= 8) {
+        cout << "Very Good";
+    }
+    else if (a[i] >= 6.5) {
+        cout << "Good";
+    }
+    else if (a[i] >= 5) {
+        cout << "Average";
+    }
+    else {
+        cout << "Fail";
+    }
+
+    cout << endl;
+}
+
 cout << "\nHighest score: " << highest << endl;
 cout << "Lowest score: " << lowest << endl;
     return 0;
