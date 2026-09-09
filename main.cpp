@@ -21,3 +21,11 @@ int main() {
             cin >> a[i];
         }
     }
+    cout << "\n===== diem hoc sinh =====\n";
+
+    for (int i = 0; i < n; i++) {
+        cout << "hoc sinh " << i + 1 << ": " << a[i] << endl;
+    }
+
+    return 0;
+}
