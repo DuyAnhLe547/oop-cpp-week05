@@ -5,6 +5,8 @@ int main() {
     float a[50];
     int passed = 0;
     int failed = 0;
+    float highest = a[0];
+    float lowest = a[0];
     cout << "nhap n: ";
     cin >> n;
     if (n <= 2 || n >= 20) {
@@ -59,5 +61,19 @@ for (int i = 0; i < n; i++) {
  cout << "Failed : " << failed << " students\n";
  cout << "Pass rate: " << passRate << "%\n";
 
+
+
+for (int i = 1; i < n; i++) {
+    if (a[i] > highest) {
+        highest = a[i];
+    }
+
+    if (a[i] < lowest) {
+        lowest = a[i];
+    }
+}
+
+cout << "\nHighest score: " << highest << endl;
+cout << "Lowest score: " << lowest << endl;
     return 0;
 }
