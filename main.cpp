@@ -3,6 +3,8 @@ using namespace std;
 int main() {
     int n;
     float a[50];
+    int passed = 0;
+    int failed = 0;
     cout << "nhap n: ";
     cin >> n;
     if (n <= 2 || n >= 20) {
@@ -32,13 +34,30 @@ int main() {
 for (int i = 0; i < n; i++) {
     if (a[i] >= 5) {
         cout << "hoc sinh " << i + 1 << ": "
-            << a[i] << " -> PASS\n";
+            << a[i] << " PASS\n";
     }
     else {
         cout << "hoc sinh " << i + 1 << ": "
-            << a[i] << " -> FAIL\n";
+            << a[i] << " FAIL\n";
     }
 }
+
+
+ for (int i = 0; i < n; i++) {
+     if (a[i] >= 5) {
+         passed++;
+     }
+     else {
+         failed++;
+     }
+ }
+
+ float passRate = (float)passed / n * 100;
+
+ cout << "\n===== STATISTICS =====\n";
+ cout << "Passed : " << passed << " students\n";
+ cout << "Failed : " << failed << " students\n";
+ cout << "Pass rate: " << passRate << "%\n";
 
     return 0;
 }
