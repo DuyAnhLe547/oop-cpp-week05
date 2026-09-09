@@ -11,3 +11,13 @@ int main() {
     else {
         cout << "so luong hoc sinh phu hop";
     }
+
+
+    for (int i = 0; i < n; i++) {
+        cout << "so diem hoc sinh " << i + 1 << ": ";
+        cin >> a[i];
+        while (a[i] < 0 || a[i] > 10) {
+            cout << "diem khong phu hop, nhap lai tu 0 den 10: ";
+            cin >> a[i];
+        }
+    }
