@@ -188,5 +188,22 @@ int main() {
         }
     }
 
+
+//phan 9
+    int streak = 0;
+    int longest = 0;
+    for(int i = 0; i < n; i++){
+       if(s[i] > 5){
+        streak++;
+        if(streak > longest){
+            longest = streak;
+        }
+        else{
+            streak = 0;
+        }
+       }
+    }
+    cout << "chuoi hoc sinh dat tu 5 tro len dai nhat: " << longest << endl;
+
     return 0;
 }
