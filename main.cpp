@@ -181,6 +181,12 @@ int main() {
         }
     }
 
+//phan 8
+    for(int i = 0; i < n - 1; i++){
+        if(s[i + 1] > s[i]){
+            cout << "hoc sinh " << i + 2 << " diem cao hơn " << i + 1 << endl;
+        }
+    }
 
     return 0;
 }
