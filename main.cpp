@@ -160,6 +160,18 @@ int main() {
         }
     }
 
+//phan 6 
+    float x;
+    int dem = 0;
+    cout << " nhap diem x: " << endl;
+    cin >> x;
+    for(int i = 0; i < n; i++){
+        if(s[i] == x){
+            dem++;
+        }
+    }
+    cout << "so " << x << "xuat hien " << dem << endl;
+
 
     return 0;
 }
