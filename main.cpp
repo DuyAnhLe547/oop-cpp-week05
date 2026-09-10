@@ -150,5 +150,16 @@ int main() {
     }
     cout << "hoc sinh co diem so cao thu hai la: " << secondhigh << endl;
 
+//phan 5
+    float diem;
+    cout << " nhap mot diem so: " << endl;
+    cin >> diem;
+    for(int i = 0; i < n; i++){
+        if(s[i] == diem){
+            cout << "hoc sinh thu: " << i + 1 << endl;
+        }
+    }
+
+
     return 0;
 }
