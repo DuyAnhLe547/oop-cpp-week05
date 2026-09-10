@@ -141,6 +141,14 @@ int main() {
     }
 
 
+//phan 4
+    int secondhigh = 0;
+    for(int i = 0; i < n; i++){
+        if(s[i] > secondhigh && s[i] < highest){
+            secondhigh = s[i];
+        }
+    }
+    cout << "hoc sinh co diem so cao thu hai la: " << secondhigh << endl;
 
     return 0;
 }
