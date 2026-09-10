@@ -172,6 +172,15 @@ int main() {
     }
     cout << "so " << x << "xuat hien " << dem << endl;
 
+//phan 7
+    for(int i = 0; i < n; i++){
+        if(s[i] < 5){
+            cout << "hoc sinh dau tien rot" << endl;
+            cout << "hoc sinh thu " << i + 1 << " co diem duoi 5 la: " << s[i] << endl;
+            break;
+        }
+    }
+
 
     return 0;
 }
