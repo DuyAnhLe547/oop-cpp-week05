@@ -205,5 +205,36 @@ int main() {
     }
     cout << "chuoi hoc sinh dat tu 5 tro len dai nhat: " << longest << endl;
 
+//phan 10
+    int num1 = 0;
+    int num2 = 0;
+    int num3 = 0;
+    int num4 = 0;
+    int num5 = 0;
+    
+    for(int i = 0; i < n; i++){
+        if(s[i] >= 0 && s[i] < 5){
+            num1++;
+        }
+        else if(s[i] >= 5 && s[i] < 6.5){
+            num2++;
+        }
+        else if(s[i] >= 6.5 && s[i] < 8){
+            num3++;
+        }
+        else if(s[i] >= 8 && s[i] < 9){
+            num4++;
+        }
+        else if(s[i] >= 9 && s[i] <= 10){
+            num5++;
+        }
+    }
+
+    cout << "Tu 0 den <5: " << num1 << endl;
+    cout << "Tu 5 den <6.5: " << num2 << endl;
+    cout << "Tu 6.5 den <8: " << num3 << endl;
+    cout << "Tu 8 den <9: " << num4 << endl;
+    cout << "Tu 9 den 10: " << num5 << endl;
+
     return 0;
 }
