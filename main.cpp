@@ -9,14 +9,13 @@ int main() {
     float lowest = s[0];
     int countExcellent = 0;
     int a, b;
-    int hs = 0;
     cout << "nhap n: ";
     cin >> n;
     if (n <= 2 || n >= 20) {
         cout << "so luong hoc sinh khong phu hop";
     }
     else {
-        cout << "so luong hoc sinh phu hop";
+        cout << "so luong hoc sinh phu hop" << endl;
     }
 
 
@@ -100,6 +99,8 @@ int main() {
         cout << endl;
     }
 
+
+//phan 1
     cout << "\nHighest score: " << highest << endl;
     cout << "Lowest score: " << lowest << endl;
     for (int i = 0; i < n; i++) {
@@ -111,6 +112,8 @@ int main() {
     cout << "so hoc sinh xuat sac: "
     << countExcellent << endl;
 
+//phan 2
+    int hs = 0;
     cout << "nhap a: ";
     cin >> a;
     cout << "nhap b: ";
@@ -121,6 +124,21 @@ int main() {
         }
     }
     cout << "tong so hoc sinh co diem tu a den b la: " << hs;
+
+//phan 3
+    float average;
+    int t = 0;
+    for(int i = 0; i < n; i++){
+        t += s[i];
+    }
+    average = (float)t / n;
+
+    cout << "hoc sinh co diem so tren trung binh"<< endl;
+    for(int i = 0; i < n; i++){
+        if(s[i] > average){
+            cout << "hoc sinh thu" << i + 1 << ": " << s[i] << endl;
+        }
+    }
 
 
 
