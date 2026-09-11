@@ -1,0 +1,59 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct flower{
+    string name;
+    double price;
+    int quantity;
+    string type;
+        
+};
+
+int main(){
+    flower x[20];
+    int n;
+
+    // Câu 1
+    cout << "How many flowers: ";
+    cin >> n;
+
+    while (n < 1 || n > 20)
+    {
+        cout << "Nhap lai n (1 - 20): ";
+        cin >> n;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << "\nflower " << i + 1 << endl;
+
+        cout << "name: ";
+        cin >> x[i].name;
+
+        cout << "price: ";
+        cin >> x[i].price;
+
+        while (x[i].price <= 0)
+        {
+            cout << "price phai > 0, nhap lai: ";
+            cin >> x[i].price;
+        }
+
+        cout << "quantity: ";
+        cin >> x[i].quantity;
+
+        while (x[i].quantity < 0)
+        {
+            cout << "quantity phai >= 0, nhap lai: ";
+            cin >> x[i].quantity;
+        }
+
+        cout << "type: ";
+        cin >> x[i].type;
+    }
+
+
+
+
+}
