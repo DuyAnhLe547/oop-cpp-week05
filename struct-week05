@@ -80,6 +80,22 @@ int main(){
         }
     }
 
+
+// Câu 4
+    string type;
+    int dem;
+    cout << "Nhap type can dem: ";
+    cin >> type;
+    dem = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (x[i].type == type)
+        {
+            dem++;
+        }
+    }
+    cout << type << " : " << dem << endl;
+
     
     return 0;
 
