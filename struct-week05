@@ -233,6 +233,31 @@ for (int i = 0; i < n; i++)
         }
     }
 
+
+//cau 8.2
+string typeCanTim;
+
+    cout << "Enter type: ";
+    cin >> typeCanTim;
+    bool coType = false;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (x[i].type == typeCanTim)
+        {
+            cout << x[i].name << " - "
+                 << x[i].price << " - "
+                 << x[i].quantity << endl;
+
+            coType = true;
+        }
+    }
+
+    if (coType == false)
+    {
+        cout << "khong thay" << endl;
+    }
+  
     return 0;
 
 }
