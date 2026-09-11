@@ -147,6 +147,19 @@ int main(){
              << x[i].type << endl;
     }
 
+//cau 2.2
+int vtMax = 0;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (x[i].price > x[vtMax].price)
+        {
+            vtMax = i;
+        }
+    }
+    cout << "flower: " << x[vtMax].name << endl;
+    cout << "price: " << x[vtMax].price << endl;
+
     return 0;
 
 }
