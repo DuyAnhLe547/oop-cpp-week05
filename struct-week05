@@ -340,6 +340,16 @@ string ten;
 
     cout << "So hoa trong khoang gia: " << dem << endl;
 
+
+//cau 13.2
+    double tong = 0;
+    for (int i = 0; i < n; i++)
+    {
+        tong += x[i].price * x[i].quantity;
+    }
+
+    cout << "Total value: " << tong << endl;
+
     return 0;
 
 }
