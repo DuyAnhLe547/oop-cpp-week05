@@ -427,6 +427,30 @@ string ten;
              << x[i].price << endl;
     }
 
+//cau 18.2
+    string keyword;
+    cout << "nhap keyword: ";
+    cin >> keyword;
+    bool found = false;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (x[i].name.find(keyword) != string::npos)
+        {
+            cout << x[i].name << " - "
+                 << x[i].price << " - "
+                 << x[i].quantity << " - "
+                 << x[i].type << endl;
+
+            found = true;
+        }
+    }
+
+    if (found == false)
+    {
+        cout << "khong tim thay hoa" << endl;
+    }
+
 
 
     return 0;
