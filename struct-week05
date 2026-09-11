@@ -309,6 +309,18 @@ string ten;
         cout << "khong ton tai" << endl;
     }
   
+
+//cau 11.2
+int dem = 0;
+for (int i = 0; i < n; i++)
+{
+    if (x[i].quantity < 5)
+    {
+        dem++;
+    }
+}
+cout << "so hoa co quantity be hon 5: " << dem << endl;
+
     return 0;
 
 }
