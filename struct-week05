@@ -162,7 +162,7 @@ int vtMax = 0;
 
 //cau 3.2
     int vtMin = 0;
-    
+
     for (int i = 1; i < n; i++)
     {
         if (x[i].price < x[vtMin].price)
@@ -172,6 +172,21 @@ int vtMax = 0;
     }
     cout << "flower: " << x[vtMin].name << endl;
     cout << "price: " << x[vtMin].price << endl;
+
+
+//cau 4.2
+    int vtQuantity = 0;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (x[i].quantity > x[vtQuantity].quantity)
+        {
+            vtQuantity = i;
+        }
+    }
+    cout << "flower: " << x[vtQuantity].name << endl;
+    cout << "quantity: " << x[vtQuantity].quantity << endl;
+
 
     return 0;
 
