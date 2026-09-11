@@ -484,6 +484,49 @@ string ten;
     }
 
 
+//cau 20.2
+    int tongQuantity = 0;
+    double tongPrice = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        tongQuantity += x[i].quantity;
+        tongPrice += x[i].price;
+    }
+
+    double averagePrice = tongPrice / n;
+    cout << "Total number of flowers: " << n << endl;
+    cout << "Total quantity: " << tongQuantity << endl;
+    cout << "Average price: " << averagePrice << endl;
+    cout << "\nNumber of flowers in each type:" << endl;
+
+    for (int i = 0; i < n; i++)
+    {
+        bool daDem = false;
+        for (int j = 0; j < i; j++)
+        {
+            if (x[i].type == x[j].type)
+            {
+                daDem = true;
+                break;
+            }
+        }
+
+        if (daDem == false)
+        {
+            int dem = 0;
+            for (int j = 0; j < n; j++)
+            {
+                if (x[j].type == x[i].type)
+                {
+                    dem++;
+                }
+            }
+            cout << x[i].type
+                 << " : " << dem << endl;
+        }
+    } 
+
     return 0;
 
 
