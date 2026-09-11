@@ -187,6 +187,15 @@ int vtMax = 0;
     cout << "flower: " << x[vtQuantity].name << endl;
     cout << "quantity: " << x[vtQuantity].quantity << endl;
 
+//cau 5.2
+int tongQuantity = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        tongQuantity += x[i].quantity;
+    }
+    cout << "Total quantity: " << tongQuantity << endl;
+
 
     return 0;
 
