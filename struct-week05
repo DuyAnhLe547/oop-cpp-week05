@@ -121,6 +121,20 @@ int main(){
         cout << "khong thay" << endl;
     }
 
+// Câu 6
+    int tongquantity = 0;
+    double tongprice = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        tongquantity += x[i].quantity;
+        tongprice += x[i].price;
+    }
+
+    double averageprice = tongprice / n;
+    cout << "Total flowers: " << n << endl;
+    cout << "Total quantity: " << tongquantity << endl;
+    cout << "Average price: " << averageprice << endl;
 
     return 0;
 
