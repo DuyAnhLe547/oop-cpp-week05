@@ -257,6 +257,33 @@ string typeCanTim;
     {
         cout << "khong thay" << endl;
     }
+
+//cau 9.2
+string tenCanTim;
+
+    cout << "Enter flower name: ";
+    cin >> tenCanTim;
+    bool timThay = false;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (x[i].name == tenCanTim)
+        {
+            cout << "Found!" << endl;
+            cout << "Name: " << x[i].name << endl;
+            cout << "Price: " << x[i].price << endl;
+            cout << "Quantity: " << x[i].quantity << endl;
+            cout << "Type: " << x[i].type << endl;
+            timThay = true;
+            break;
+        }
+    }
+
+    if (timThay == false)
+    {
+        cout << "khong thay" << endl;
+    }
+
   
     return 0;
 
