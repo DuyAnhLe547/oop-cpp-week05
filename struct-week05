@@ -350,6 +350,21 @@ string ten;
 
     cout << "Total value: " << tong << endl;
 
+//cau 14.2
+    int vtMax = 0;
+    for (int i = 1; i < n; i++)
+    {
+        double giaTri1 = x[i].price * x[i].quantity;
+        double giaTri2 = x[vtMax].price * x[vtMax].quantity;
+        if (giaTri1 > giaTri2)
+        {
+            vtMax = i;
+        }
+    }
+    cout << "Most valuable: " << x[vtMax].name << endl;
+
+
     return 0;
+
 
 }
