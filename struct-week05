@@ -196,6 +196,17 @@ int tongQuantity = 0;
     }
     cout << "Total quantity: " << tongQuantity << endl;
 
+//cau 6.2
+double tongprice = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        tongprice += x[i].price;
+    }
+
+    double averageprice = tongprice / n;
+    cout << "Average price: " << averageprice << endl;
+
 
     return 0;
 
