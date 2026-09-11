@@ -96,7 +96,32 @@ int main(){
     }
     cout << type << " : " << dem << endl;
 
-    
+// Câu 5
+    string ten;
+    bool found = false;
+    cout << "\nEnter flower name to search: ";
+    cin >> ten;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (x[i].name == ten)
+        {
+            cout << "\nFound!" << endl;
+            cout << "Name: " << x[i].name << endl;
+            cout << "Price: " << x[i].price << endl;
+            cout << "Quantity: " << x[i].quantity << endl;
+            cout << "Type: " << x[i].type << endl;
+            found = true;
+            break;
+        }
+    }
+
+    if (found == false)
+    {
+        cout << "khong thay" << endl;
+    }
+
+
     return 0;
 
 }
