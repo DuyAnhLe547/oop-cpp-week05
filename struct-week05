@@ -54,6 +54,33 @@ int main(){
     }
 
 
+ // Câu 2
+    for (int i = 0; i < n; i++)
+    {
+        cout << i + 1 << " "
+             << x[i].name << " "
+             << x[i].price << " "
+             << x[i].quantity << " "
+             << x[i].type << endl;
+    }
 
+// Câu 3
+    int vtmax = 0;
+    int vtmin = 0;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (x[i].price > x[vtmax].price)
+        {
+            vtmax = i;
+        }
+        if (x[i].price < x[vtmin].price)
+        {
+            vtmin = i;
+        }
+    }
+
+    
+    return 0;
 
 }
