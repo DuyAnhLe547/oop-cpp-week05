@@ -311,15 +311,34 @@ string ten;
   
 
 //cau 11.2
-int dem = 0;
-for (int i = 0; i < n; i++)
-{
-    if (x[i].quantity < 5)
+    int dem = 0;
+    for (int i = 0; i < n; i++)
     {
-        dem++;
+        if (x[i].quantity < 5)
+        {
+            dem++;
+        }
     }
-}
-cout << "so hoa co quantity be hon 5: " << dem << endl;
+    cout << "so hoa co quantity be hon 5: " << dem << endl;
+
+//cau 12.2
+    double minPrice, maxPrice;
+    int dem = 0;
+    cout << "Nhap gia nho nhat: ";
+    cin >> minPrice;
+    cout << "Nhap gia lon nhat: ";
+    cin >> maxPrice;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (x[i].price >= minPrice &&
+            x[i].price <= maxPrice)
+        {
+            dem++;
+        }
+    }
+
+    cout << "So hoa trong khoang gia: " << dem << endl;
 
     return 0;
 
