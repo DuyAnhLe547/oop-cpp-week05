@@ -284,6 +284,30 @@ string tenCanTim;
         cout << "khong thay" << endl;
     }
 
+
+//cau 10.2
+string ten;
+
+    cout << "Enter flower name: ";
+    cin >> ten;
+    bool tonTai = false;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (x[i].name == ten)
+        {
+            tonTai = true;
+            break;
+        }
+    }
+    if (tonTai == true)
+    {
+        cout << "co ton tai!" << endl;
+    }
+    else
+    {
+        cout << "khong ton tai" << endl;
+    }
   
     return 0;
 
