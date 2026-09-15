@@ -10,14 +10,8 @@ struct flower{
         
 };
 
-int main(){
-    flower x[20];
-    int n;
-
-    // Câu 1
-    cout << "How many flowers: ";
-    cin >> n;
-
+ // Câu 1
+void nhaphoa(flower x[], int n){
     while (n < 1 || n > 20)
     {
         cout << "Nhap lai n (1 - 20): ";
@@ -52,6 +46,19 @@ int main(){
         cout << "type: ";
         cin >> x[i].type;
     }
+}
+
+
+
+
+int main(){
+    flower x[20];
+    int n;
+
+    cout << "How many flowers: ";
+    cin >> n;
+
+    nhaphoa(x, n);
 
 
  // Câu 2
