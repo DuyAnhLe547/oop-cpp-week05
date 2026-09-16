@@ -79,7 +79,20 @@ void timgiacaothap(flower x[], int n, int& vtmax, int& vtmin)
     }
 }
 
+int demtheoType(flower x[], int n, string type)
+{
+    int dem = 0;
 
+    for (int i = 0; i < n; i++)
+    {
+        if (x[i].type == type)
+        {
+            dem++;
+        }
+    }
+
+    return dem;
+}
 
 int main(){
     flower x[20];
@@ -97,24 +110,17 @@ int main(){
     cout << "Gia cao nhat: " << x[vtmax].price << endl;
     cout << "Gia thap nhat: " << x[vtmin].price << endl;
     
-
-
-
-
-// Câu 4
     string type;
-    int dem;
     cout << "Nhap type can dem: ";
     cin >> type;
-    dem = 0;
-    for (int i = 0; i < n; i++)
-    {
-        if (x[i].type == type)
-        {
-            dem++;
-        }
-    }
+
+    int dem = demtheoType(x, n, type);
+
     cout << type << " : " << dem << endl;
+
+
+
+
 
 // Câu 5
     string ten;
