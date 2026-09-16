@@ -309,6 +309,21 @@ bool tonTaiHoa(flower x[], int n, string ten)
     return false;
 }
 
+int demHoaQuantityNhoHon5(flower x[], int n)
+{
+    int dem = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (x[i].quantity < 5)
+        {
+            dem++;
+        }
+    }
+
+    return dem;
+}
+
 int main(){
     flower x[20];
     int n;
@@ -430,14 +445,7 @@ int main(){
   
 
 //cau 11.2
-    int dem = 0;
-    for (int i = 0; i < n; i++)
-    {
-        if (x[i].quantity < 5)
-        {
-            dem++;
-        }
-    }
+    int dem = demHoaQuantityNhoHon5(x, n);
     cout << "so hoa co quantity be hon 5: " << dem << endl;
 
 //cau 12.2
