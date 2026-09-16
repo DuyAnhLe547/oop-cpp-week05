@@ -340,6 +340,18 @@ int demHoaTrongKhoangGia(flower x[], int n, double minPrice, double maxPrice)
     return dem;
 }
 
+double tinhTongGiaTri(flower x[], int n)
+{
+    double tong = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        tong += x[i].price * x[i].quantity;
+    }
+
+    return tong;
+}
+
 int main(){
     flower x[20];
     int n;
@@ -474,12 +486,7 @@ int main(){
     cout << "So hoa trong khoang gia: " << dem << endl;
 
 //cau 13.2
-    double tong = 0;
-    for (int i = 0; i < n; i++)
-    {
-        tong += x[i].price * x[i].quantity;
-    }
-
+    double tong = tinhTongGiaTri(x, n);
     cout << "Total value: " << tong << endl;
 
 //cau 14.2
