@@ -437,6 +437,34 @@ void top3GiaCao(flower x[], int n)
     }
 }
 
+void timTheoKeyword(flower x[], int n)
+{
+    string keyword;
+
+    cout << "Nhap keyword: ";
+    cin >> keyword;
+
+    bool found = false;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (x[i].name.find(keyword) != string::npos)
+        {
+            cout << x[i].name << " - "
+                 << x[i].price << " - "
+                 << x[i].quantity << " - "
+                 << x[i].type << endl;
+
+            found = true;
+        }
+    }
+
+    if (found == false)
+    {
+        cout << "khong tim thay hoa" << endl;
+    }
+}
+
 int main(){
     flower x[20];
     int n;
@@ -597,28 +625,7 @@ int main(){
     top3GiaCao(x, n);
 
 //cau 18.2
-    string keyword;
-    cout << "nhap keyword: ";
-    cin >> keyword;
-    bool found = false;
-
-    for (int i = 0; i < n; i++)
-    {
-        if (x[i].name.find(keyword) != string::npos)
-        {
-            cout << x[i].name << " - "
-                 << x[i].price << " - "
-                 << x[i].quantity << " - "
-                 << x[i].type << endl;
-
-            found = true;
-        }
-    }
-
-    if (found == false)
-    {
-        cout << "khong tim thay hoa" << endl;
-    }
+    timTheoKeyword(x, n);
 
 //cau 19.2
     for (int i = 0; i < n; i++)
