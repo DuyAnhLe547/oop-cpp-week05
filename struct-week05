@@ -384,6 +384,29 @@ void sapXepHoaTheoGia(flower x[], int n)
     }
 }
 
+void sapXepTheoTen(flower x[], int n)
+{
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (x[j].name > x[j + 1].name)
+            {
+                swap(x[j], x[j + 1]);
+            }
+        }
+    }
+
+    cout << "Flowers sorted by name:" << endl;
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << x[i].name << " - "
+             << x[i].price << " - "
+             << x[i].quantity << endl;
+    }
+}
+
 int main(){
     flower x[20];
     int n;
@@ -537,25 +560,8 @@ int main(){
     }
 
 //cau 16.2
-    for (int i = 0; i < n - 1; i++)
-    {
-        for (int j = 0; j < n - i - 1; j++)
-        {
-            if (x[j].name > x[j + 1].name)
-            {
-                swap(x[j], x[j + 1]);
-            }
-        }
-    }
-
-    cout << "Flowers sorted by name:" << endl;
-
-    for (int i = 0; i < n; i++)
-    {
-        cout << x[i].name << " - "
-             << x[i].price << " - "
-             << x[i].quantity << endl;
-    }
+    sapXepTheoTen(x, n);
+      
 
 //cau 17.2
     for (int i = 0; i < n - 1; i++)
