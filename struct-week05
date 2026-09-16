@@ -107,6 +107,31 @@ int timhoatheoten(flower x[], int n, string ten)
     return -1;
 }
 
+int tongSoLuong(flower x[], int n)
+{
+    int tong = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        tong += x[i].quantity;
+    }
+
+    return tong;
+}
+
+
+double tongGia(flower x[], int n)
+{
+    double tong = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        tong += x[i].price;
+    }
+
+    return tong;
+}
+
 int main(){
     flower x[20];
     int n;
@@ -153,19 +178,13 @@ int main(){
     }
 
 
-    
 
-// Câu 6
-    int tongquantity = 0;
-    double tongprice = 0;
 
-    for (int i = 0; i < n; i++)
-    {
-        tongquantity += x[i].quantity;
-        tongprice += x[i].price;
-    }
+    int tongquantity = tongSoLuong(x, n);
+    double tongprice = tongGia(x, n);
 
     double averageprice = tongprice / n;
+
     cout << "Total flowers: " << n << endl;
     cout << "Total quantity: " << tongquantity << endl;
     cout << "Average price: " << averageprice << endl;
