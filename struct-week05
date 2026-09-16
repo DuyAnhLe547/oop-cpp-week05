@@ -271,6 +271,31 @@ void timHoaTheoType(flower x[], int n, string typeCanTim)
     }
 }
 
+void timHoaTheoTen(flower x[], int n, string tenCanTim)
+{
+    bool timThay = false;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (x[i].name == tenCanTim)
+        {
+            cout << "Found!" << endl;
+            cout << "Name: " << x[i].name << endl;
+            cout << "Price: " << x[i].price << endl;
+            cout << "Quantity: " << x[i].quantity << endl;
+            cout << "Type: " << x[i].type << endl;
+
+            timThay = true;
+            break;
+        }
+    }
+
+    if (timThay == false)
+    {
+        cout << "khong thay" << endl;
+    }
+}
+
 int main(){
     flower x[20];
     int n;
@@ -369,30 +394,10 @@ int main(){
     timHoaTheoType(x, n, typeCanTim);
 
 //cau 9.2
-string tenCanTim;
-
+    string tenCanTim;
     cout << "Enter flower name: ";
     cin >> tenCanTim;
-    bool timThay = false;
-
-    for (int i = 0; i < n; i++)
-    {
-        if (x[i].name == tenCanTim)
-        {
-            cout << "Found!" << endl;
-            cout << "Name: " << x[i].name << endl;
-            cout << "Price: " << x[i].price << endl;
-            cout << "Quantity: " << x[i].quantity << endl;
-            cout << "Type: " << x[i].type << endl;
-            timThay = true;
-            break;
-        }
-    }
-
-    if (timThay == false)
-    {
-        cout << "khong thay" << endl;
-    }
+    timHoaTheoTen(x, n, tenCanTim);
 
 
 //cau 10.2
