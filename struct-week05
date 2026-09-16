@@ -296,6 +296,19 @@ void timHoaTheoTen(flower x[], int n, string tenCanTim)
     }
 }
 
+bool tonTaiHoa(flower x[], int n, string ten)
+{
+    for (int i = 0; i < n; i++)
+    {
+        if (x[i].name == ten)
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 int main(){
     flower x[20];
     int n;
@@ -401,21 +414,12 @@ int main(){
 
 
 //cau 10.2
-string ten;
+    string ten;
 
     cout << "Enter flower name: ";
     cin >> ten;
-    bool tonTai = false;
 
-    for (int i = 0; i < n; i++)
-    {
-        if (x[i].name == ten)
-        {
-            tonTai = true;
-            break;
-        }
-    }
-    if (tonTai == true)
+    if (tonTaiHoa(x, n, ten))
     {
         cout << "co ton tai!" << endl;
     }
