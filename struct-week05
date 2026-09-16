@@ -204,6 +204,18 @@ int tongQuantity(flower x[], int n)
     return tong;
 }
 
+double tinhGiaTrungBinh(flower x[], int n)
+{
+    double tongprice = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        tongprice += x[i].price;
+    }
+
+    return tongprice / n;
+}
+
 int main(){
     flower x[20];
     int n;
@@ -288,14 +300,7 @@ int main(){
     cout << "Total quantity: " << tong << endl;
 
 //cau 6.2
-double tongprice = 0;
-
-    for (int i = 0; i < n; i++)
-    {
-        tongprice += x[i].price;
-    }
-
-    double averageprice = tongprice / n;
+    double averageprice = tinhGiaTrungBinh(x, n);
     cout << "Average price: " << averageprice << endl;
 
 //cau 7.2
