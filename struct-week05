@@ -191,6 +191,19 @@ int timQuantityLonNhat(flower x[], int n)
     return vtQuantity;
 }
 
+
+int tongQuantity(flower x[], int n)
+{
+    int tong = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        tong += x[i].quantity;
+    }
+
+    return tong;
+}
+
 int main(){
     flower x[20];
     int n;
@@ -271,13 +284,8 @@ int main(){
     cout << "quantity: " << x[vtQuantity].quantity << endl;
 
 //cau 5.2
-int tongQuantity = 0;
-
-    for (int i = 0; i < n; i++)
-    {
-        tongQuantity += x[i].quantity;
-    }
-    cout << "Total quantity: " << tongQuantity << endl;
+    int tong = tongQuantity(x, n);
+    cout << "Total quantity: " << tong << endl;
 
 //cau 6.2
 double tongprice = 0;
