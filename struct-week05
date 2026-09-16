@@ -249,6 +249,28 @@ void demMoiType(flower x[], int n)
     }
 }
 
+void timHoaTheoType(flower x[], int n, string typeCanTim)
+{
+    bool coType = false;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (x[i].type == typeCanTim)
+        {
+            cout << x[i].name << " - "
+                 << x[i].price << " - "
+                 << x[i].quantity << endl;
+
+            coType = true;
+        }
+    }
+
+    if (coType == false)
+    {
+        cout << "khong thay" << endl;
+    }
+}
+
 int main(){
     flower x[20];
     int n;
@@ -341,28 +363,10 @@ int main(){
 
 
 //cau 8.2
-string typeCanTim;
-
+    string typeCanTim;
     cout << "Enter type: ";
     cin >> typeCanTim;
-    bool coType = false;
-
-    for (int i = 0; i < n; i++)
-    {
-        if (x[i].type == typeCanTim)
-        {
-            cout << x[i].name << " - "
-                 << x[i].price << " - "
-                 << x[i].quantity << endl;
-
-            coType = true;
-        }
-    }
-
-    if (coType == false)
-    {
-        cout << "khong thay" << endl;
-    }
+    timHoaTheoType(x, n, typeCanTim);
 
 //cau 9.2
 string tenCanTim;
