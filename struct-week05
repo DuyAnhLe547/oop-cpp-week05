@@ -176,6 +176,21 @@ int timGiaThapNhat(flower x[], int n)
     return vtMin;
 }
 
+int timQuantityLonNhat(flower x[], int n)
+{
+    int vtQuantity = 0;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (x[i].quantity > x[vtQuantity].quantity)
+        {
+            vtQuantity = i;
+        }
+    }
+
+    return vtQuantity;
+}
+
 int main(){
     flower x[20];
     int n;
@@ -251,15 +266,7 @@ int main(){
 
 
 //cau 4.2
-    int vtQuantity = 0;
-
-    for (int i = 1; i < n; i++)
-    {
-        if (x[i].quantity > x[vtQuantity].quantity)
-        {
-            vtQuantity = i;
-        }
-    }
+    int vtQuantity = timQuantityLonNhat(x, n);
     cout << "flower: " << x[vtQuantity].name << endl;
     cout << "quantity: " << x[vtQuantity].quantity << endl;
 
