@@ -60,6 +60,25 @@ void xuathoa(flower x[], int n){
     }
 }
 
+void timgiacaothap(flower x[], int n, int& vtmax, int& vtmin)
+{
+    vtmax = 0;
+    vtmin = 0;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (x[i].price > x[vtmax].price)
+        {
+            vtmax = i;
+        }
+
+        if (x[i].price < x[vtmin].price)
+        {
+            vtmin = i;
+        }
+    }
+}
+
 
 
 int main(){
@@ -70,24 +89,16 @@ int main(){
     cin >> n;
 
     nhaphoa(x, n);
+
     xuathoa(x, n);
+
+    int vtmax, vtmin;
+    timgiacaothap(x, n, vtmax, vtmin);
+    cout << "Gia cao nhat: " << x[vtmax].price << endl;
+    cout << "Gia thap nhat: " << x[vtmin].price << endl;
     
 
-// Câu 3
-    int vtmax = 0;
-    int vtmin = 0;
 
-    for (int i = 1; i < n; i++)
-    {
-        if (x[i].price > x[vtmax].price)
-        {
-            vtmax = i;
-        }
-        if (x[i].price < x[vtmin].price)
-        {
-            vtmin = i;
-        }
-    }
 
 
 // Câu 4
