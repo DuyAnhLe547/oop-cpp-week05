@@ -161,6 +161,21 @@ int timgiacaonhat(flower x[], int n)
     return vtMax;
 }
 
+int timGiaThapNhat(flower x[], int n)
+{
+    int vtMin = 0;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (x[i].price < x[vtMin].price)
+        {
+            vtMin = i;
+        }
+    }
+
+    return vtMin;
+}
+
 int main(){
     flower x[20];
     int n;
@@ -230,15 +245,7 @@ int main(){
     cout << "price: " << x[vtMax].price << endl;
 
 //cau 3.2
-    int vtMin = 0;
-
-    for (int i = 1; i < n; i++)
-    {
-        if (x[i].price < x[vtMin].price)
-        {
-            vtMin = i;
-        }
-    }
+    int vtMin = timGiaThapNhat(x, n);
     cout << "flower: " << x[vtMin].name << endl;
     cout << "price: " << x[vtMin].price << endl;
 
