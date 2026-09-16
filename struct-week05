@@ -145,6 +145,22 @@ void xuatDanhSach(flower x[], int n)
     }
 }
 
+
+int timgiacaonhat(flower x[], int n)
+{
+    int vtMax = 0;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (x[i].price > x[vtMax].price)
+        {
+            vtMax = i;
+        }
+    }
+
+    return vtMax;
+}
+
 int main(){
     flower x[20];
     int n;
@@ -208,15 +224,8 @@ int main(){
     xuatDanhSach(x, n);
 
 //cau 2.2
-int vtMax = 0;
+    int vtMax = timgiacaonhat(x, n);
 
-    for (int i = 1; i < n; i++)
-    {
-        if (x[i].price > x[vtMax].price)
-        {
-            vtMax = i;
-        }
-    }
     cout << "flower: " << x[vtMax].name << endl;
     cout << "price: " << x[vtMax].price << endl;
 
