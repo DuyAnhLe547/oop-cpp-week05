@@ -132,6 +132,19 @@ double tongGia(flower x[], int n)
     return tong;
 }
 
+
+void xuatDanhSach(flower x[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cout << i + 1 << ". "
+             << x[i].name << " - "
+             << x[i].price << " - "
+             << x[i].quantity << " - "
+             << x[i].type << endl;
+    }
+}
+
 int main(){
     flower x[20];
     int n;
@@ -190,15 +203,9 @@ int main(){
     cout << "Average price: " << averageprice << endl;
 
 
+
 //cau 1.2
-    for (int i = 0; i < n; i++)
-    {
-        cout << i + 1 << ". "
-             << x[i].name << " - "
-             << x[i].price << " - "
-             << x[i].quantity << " - "
-             << x[i].type << endl;
-    }
+    xuatDanhSach(x, n);
 
 //cau 2.2
 int vtMax = 0;
