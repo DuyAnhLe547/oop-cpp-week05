@@ -1,119 +1,85 @@
 #include <iostream>
 using namespace std;
-int main() {
-    int n;
-    float s[50];
-    int passed = 0;
-    int failed = 0;
+
+void cau1(float s[], int n)
+{
     float highest = s[0];
     float lowest = s[0];
     int countExcellent = 0;
-    int a, b;
-    cout << "nhap n: ";
-    cin >> n;
-    if (n <= 2 || n >= 20) {
-        cout << "so luong hoc sinh khong phu hop";
-    }
-    else {
-        cout << "so luong hoc sinh phu hop" << endl;
-    }
 
-
-    for (int i = 0; i < n; i++) {
-        cout << "so diem hoc sinh " << i + 1 << ": ";
-        cin >> s[i];
-        while (s[i] < 0 || s[i] > 10) {
-            cout << "diem khong phu hop, nhap lai tu 0 den 10: ";
-            cin >> s[i];
-        }
-    }
-    cout << "\n===== diem hoc sinh =====\n";
-
-    for (int i = 0; i < n; i++) {
-        cout << "hoc sinh " << i + 1 << ": " << s[i] << endl;
-    }
-
-    cout << "\n===== RESULTS =====\n";
-
-    for (int i = 0; i < n; i++) {
-        if (s[i] >= 5) {
-            cout << "hoc sinh " << i + 1 << ": "
-                << s[i] << " PASS\n";
-        }
-        else {
-            cout << "hoc sinh " << i + 1 << ": "
-                << s[i] << " FAIL\n";
-        }
-    }
-
-
-    for (int i = 0; i < n; i++) {
-        if (s[i] >= 5) {
-            passed++;
-        }
-        else {
-            failed++;
-        }
-    }
-
-    float passRate = (float)passed / n * 100;
-
-    cout << "\n===== STATISTICS =====\n";
-    cout << "Passed : " << passed << " students\n";
-    cout << "Failed : " << failed << " students\n";
-    cout << "Pass rate: " << passRate << "%\n";
-
-
-
-    for (int i = 1; i < n; i++) {
-        if (s[i] > highest) {
+    for (int i = 1; i < n; i++)
+    {
+        if (s[i] > highest)
+        {
             highest = s[i];
         }
 
-        if (s[i] < lowest) {
+        if (s[i] < lowest)
+        {
             lowest = s[i];
         }
     }
 
-    cout << "\n===== CLASSIFICATION =====\n";
-
-    for (int i = 0; i < n; i++) {
-        cout << "Student " << i + 1 << ": " << s[i] << " -> ";
-
-        if (s[i] >= 9) {
-            cout << "Excellent";
-        }
-        else if (s[i] >= 8) {
-            cout << "Very Good";
-        }
-        else if (s[i] >= 6.5) {
-            cout << "Good";
-        }
-        else if (s[i] >= 5) {
-            cout << "Average";
-        }
-        else {
-            cout << "Fail";
-        }
-
-        cout << endl;
-    }
-
-
-//phan 1
-    cout << "\nHighest score: " << highest << endl;
-    cout << "Lowest score: " << lowest << endl;
-    for (int i = 0; i < n; i++) {
-        if (s[i] >= 9.0) {
+    for (int i = 0; i < n; i++)
+    {
+        if (s[i] >= 9.0)
+        {
             countExcellent++;
         }
     }
 
-    cout << "so hoc sinh xuat sac: "
-    << countExcellent << endl;
+    cout << "Highest score: " << highest << endl;
+    cout << "Lowest score: " << lowest << endl;
+    cout << "So hoc sinh xuat sac: " << countExcellent << endl;
+}
 
-//phan 2
-    int hs = 0;
+int main() {
+    int n;
+    float s[50];
+
+    cout << "Nhap n: ";
+    cin >> n;
+
+    if (n < 2 || n > 20)
+    {
+        cout << "So luong hoc sinh khong phu hop";
+        return 0;
+    }
+    else
+    {
+        cout << "So luong hoc sinh phu hop"
+             << endl;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << "So diem hoc sinh "
+             << i + 1 << ": ";
+
+        cin >> s[i];
+
+        while (s[i] < 0 || s[i] > 10)
+        {
+            cout << "Diem khong phu hop, "
+                 << "nhap lai tu 0 den 10: ";
+
+            cin >> s[i];
+        }
+    }
+
+    cout << "\n DIEM HOC SINH \n";
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Hoc sinh "
+             << i + 1 << ": "
+             << s[i] << endl;
+    }
+
+    cout << "\n CAU 1 \n";
+    cau1(s, n);
+
+    /*int hs = 0;
     cout << "nhap a: ";
     cin >> a;
     cout << "nhap b: ";
@@ -234,7 +200,7 @@ int main() {
     cout << "Tu 5 den <6.5: " << num2 << endl;
     cout << "Tu 6.5 den <8: " << num3 << endl;
     cout << "Tu 8 den <9: " << num4 << endl;
-    cout << "Tu 9 den 10: " << num5 << endl;
+    cout << "Tu 9 den 10: " << num5 << endl;*/
 
     return 0;
 }
