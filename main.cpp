@@ -57,6 +57,35 @@ void cau2(float s[], int n)
          << hs << endl;
 }
 
+void cau3(float s[], int n)
+{
+    float average;
+    float t = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        t += s[i];
+    }
+
+    average = t / n;
+
+    cout << "\nDiem trung binh: "
+         << average << endl;
+
+    cout << "Hoc sinh co diem tren trung binh:"
+         << endl;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (s[i] > average)
+        {
+            cout << "Hoc sinh thu "
+                 << i + 1 << ": "
+                 << s[i] << endl;
+        }
+    }
+}
+
 int main() {
     int n;
     float s[50];
@@ -106,24 +135,12 @@ int main() {
     cout << "\n CAU 2 \n";
     cau2(s, n);
 
-//phan 3
-    /*float average;
-    int t = 0;
-    for(int i = 0; i < n; i++){
-        t += s[i];
-    }
-    average = (float)t / n;
-
-    cout << "hoc sinh co diem so tren trung binh"<< endl;
-    for(int i = 0; i < n; i++){
-        if(s[i] > average){
-            cout << "hoc sinh thu" << i + 1 << ": " << s[i] << endl;
-        }
-    }
+    cout << "\n CAU 3 \n";
+    cau3(s, n);
 
 
 //phan 4
-    int secondhigh = 0;
+   /*int secondhigh = 0;
     for(int i = 0; i < n; i++){
         if(s[i] > secondhigh && s[i] < highest){
             secondhigh = s[i];
