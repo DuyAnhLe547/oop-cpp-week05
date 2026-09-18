@@ -86,6 +86,99 @@ void cau3(float s[], int n)
     }
 }
 
+void cau3(float s[], int n)
+{
+    float average;
+    float t = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        t += s[i];
+    }
+
+    average = t / n;
+
+    cout << "\nDiem trung binh: "
+         << average << endl;
+
+    cout << "Hoc sinh co diem tren trung binh:"
+         << endl;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (s[i] > average)
+        {
+            cout << "Hoc sinh thu "
+                 << i + 1 << ": "
+                 << s[i] << endl;
+        }
+    }
+}
+
+
+void cau4(float s[], int n)
+{
+    float highest = s[0];
+    float secondhigh = -1;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (s[i] > highest)
+        {
+            highest = s[i];
+        }
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        if (s[i] > secondhigh && s[i] < highest)
+        {
+            secondhigh = s[i];
+        }
+    }
+
+    cout << "\nDiem cao thu hai la: "
+         << secondhigh << endl;
+}
+
+void cau5(float s[], int n)
+{
+    float diem;
+
+    cout << "\nNhap mot diem so: ";
+    cin >> diem;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (s[i] == diem)
+        {
+            cout << "Hoc sinh thu "
+                 << i + 1 << endl;
+        }
+    }
+}
+
+void cau6(float s[], int n)
+{
+    float x;
+    int dem = 0;
+
+    cout << "\nNhap diem x: ";
+    cin >> x;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (s[i] == x)
+        {
+            dem++;
+        }
+    }
+
+    cout << "So " << x
+         << " xuat hien "
+         << dem << " lan" << endl;
+}
+
 int main() {
     int n;
     float s[50];
@@ -138,40 +231,20 @@ int main() {
     cout << "\n CAU 3 \n";
     cau3(s, n);
 
+    cout << "\n\ CAU 4 \\n";
+    cau4(s, n);
 
-//phan 4
-   /*int secondhigh = 0;
-    for(int i = 0; i < n; i++){
-        if(s[i] > secondhigh && s[i] < highest){
-            secondhigh = s[i];
-        }
-    }
-    cout << "hoc sinh co diem so cao thu hai la: " << secondhigh << endl;
+    cout << "\n CAU 5 \n";
+    cau5(s, n);
 
-//phan 5
-    float diem;
-    cout << " nhap mot diem so: " << endl;
-    cin >> diem;
-    for(int i = 0; i < n; i++){
-        if(s[i] == diem){
-            cout << "hoc sinh thu: " << i + 1 << endl;
-        }
-    }
+    cout << "\n CAU 6 \n";
+    cau6(s, n);
 
-//phan 6 
-    float x;
-    int dem = 0;
-    cout << " nhap diem x: " << endl;
-    cin >> x;
-    for(int i = 0; i < n; i++){
-        if(s[i] == x){
-            dem++;
-        }
-    }
-    cout << "so " << x << "xuat hien " << dem << endl;
+
+
 
 //phan 7
-    for(int i = 0; i < n; i++){
+    /*for(int i = 0; i < n; i++){
         if(s[i] < 5){
             cout << "hoc sinh dau tien rot" << endl;
             cout << "hoc sinh thu " << i + 1 << " co diem duoi 5 la: " << s[i] << endl;
