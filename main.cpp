@@ -179,6 +179,25 @@ void cau6(float s[], int n)
          << dem << " lan" << endl;
 }
 
+void cau7(float s[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        if (s[i] < 5)
+        {
+            cout << "\nHoc sinh dau tien rot" << endl;
+
+            cout << "Hoc sinh thu "
+                 << i + 1
+                 << " co diem duoi 5 la: "
+                 << s[i] << endl;
+
+            break;
+        }
+    }
+}
+
+
 int main() {
     int n;
     float s[50];
@@ -240,20 +259,15 @@ int main() {
     cout << "\n CAU 6 \n";
     cau6(s, n);
 
+    cout << "\n CAU 7 \n";
+    cau7(s, n);
 
 
 
-//phan 7
-    /*for(int i = 0; i < n; i++){
-        if(s[i] < 5){
-            cout << "hoc sinh dau tien rot" << endl;
-            cout << "hoc sinh thu " << i + 1 << " co diem duoi 5 la: " << s[i] << endl;
-            break;
-        }
-    }
+
 
 //phan 8
-    for(int i = 0; i < n - 1; i++){
+    /*for(int i = 0; i < n - 1; i++){
         if(s[i + 1] > s[i]){
             cout << "hoc sinh " << i + 2 << " diem cao hơn " << i + 1 << endl;
         }
