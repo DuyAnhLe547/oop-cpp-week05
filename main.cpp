@@ -213,6 +213,32 @@ void cau8(float s[], int n)
     }
 }
 
+void cau9(float s[], int n)
+{
+    int streak = 0;
+    int longest = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (s[i] >= 5)
+        {
+            streak++;
+
+            if (streak > longest)
+            {
+                longest = streak;
+            }
+        }
+        else
+        {
+            streak = 0;
+        }
+    }
+
+    cout << "\nChuoi hoc sinh dat tu 5 tro len dai nhat: "
+         << longest << endl;
+}
+
 
 int main() {
     int n;
@@ -281,30 +307,17 @@ int main() {
     cout << "\n CAU 8 \n";
     cau8(s, n);
 
+    cout << "\n CAU 9 \n";
+    cau9(s, n);
 
 
 
 
 
 
-//phan 9
-    /*int streak = 0;
-    int longest = 0;
-    for(int i = 0; i < n; i++){
-       if(s[i] > 5){
-        streak++;
-        if(streak > longest){
-            longest = streak;
-        }
-        else{
-            streak = 0;
-        }
-       }
-    }
-    cout << "chuoi hoc sinh dat tu 5 tro len dai nhat: " << longest << endl;
 
 //phan 10
-    int num1 = 0;
+    /*int num1 = 0;
     int num2 = 0;
     int num3 = 0;
     int num4 = 0;
