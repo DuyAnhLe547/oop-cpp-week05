@@ -33,6 +33,30 @@ void cau1(float s[], int n)
     cout << "So hoc sinh xuat sac: " << countExcellent << endl;
 }
 
+
+void cau2(float s[], int n)
+{
+    int a, b;
+    int hs = 0;
+
+    cout << "\nNhap a: ";
+    cin >> a;
+
+    cout << "Nhap b: ";
+    cin >> b;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (s[i] >= a && s[i] <= b)
+        {
+            hs++;
+        }
+    }
+
+    cout << "Tong so hoc sinh co diem tu a den b la: "
+         << hs << endl;
+}
+
 int main() {
     int n;
     float s[50];
@@ -79,20 +103,11 @@ int main() {
     cout << "\n CAU 1 \n";
     cau1(s, n);
 
-    /*int hs = 0;
-    cout << "nhap a: ";
-    cin >> a;
-    cout << "nhap b: ";
-    cin >> b;
-    for(int i = 0; i < n;i++){
-        if(s[i] >= a && s[i] <= b){
-            hs++;
-        }
-    }
-    cout << "tong so hoc sinh co diem tu a den b la: " << hs;
+    cout << "\n CAU 2 \n";
+    cau2(s, n);
 
 //phan 3
-    float average;
+    /*float average;
     int t = 0;
     for(int i = 0; i < n; i++){
         t += s[i];
